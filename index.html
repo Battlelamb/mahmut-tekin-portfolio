@@ -28,7 +28,6 @@
             background: white;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             position: relative;
-            overflow: hidden;
         }
 
         .container {
@@ -387,8 +386,7 @@
         /* ========== PRINT ========== */
         @page {
             size: A4;
-            margin: 0;
-            padding: 0;
+            margin: 10mm 14mm;
         }
 
         @media print {
@@ -402,9 +400,34 @@
                 box-shadow: none;
                 width: 100%;
                 min-height: 0;
+                padding: 0;
+            }
+            .container {
+                padding: 0;
             }
             .no-print {
                 display: none !important;
+            }
+            .job {
+                page-break-inside: avoid;
+            }
+            .education {
+                page-break-inside: avoid;
+            }
+            .header {
+                page-break-inside: avoid;
+            }
+            .section-header {
+                page-break-after: avoid;
+            }
+            .two-columns {
+                page-break-inside: avoid;
+            }
+            .refs-grid {
+                page-break-inside: avoid;
+            }
+            .footer {
+                page-break-inside: avoid;
             }
         }
 
